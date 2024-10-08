@@ -1,0 +1,371 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+.top-offer-bar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding:0;
+  align-items: center;
+}
+
+.offer-text {
+  text-align: center;
+  flex: 1;
+}
+
+.explore-text {
+  color: red;
+}
+
+.offer-icons {
+  display: flex;
+  align-items: center;
+}
+
+.red-icon {
+  color: red;
+  margin-left: 10px;
+}
+
+.close-icon {
+  color: rgb(254, 1, 1);
+}
+
+.second-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: white;
+}
+
+.logo {
+  width: 100px;
+}
+
+.middle-menu span {
+  color: black; /* Set default color for all items */
+  padding: 0 10px;
+  font-size: 16px;
+  cursor: pointer; /* Add pointer to show it's clickable */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.middle-menu span:hover {
+  color: red; /* Change color to red on hover */
+}
+
+.middle-menu span:first-child {
+  color: red; /* Make only "MEDICINE" red by targeting the first span */
+}
+
+.middle-menu span:first-child:hover {
+  color: red; /* Prevent hover effect from changing color of "MEDICINE" */
+}
+
+
+.small-red-button {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.right-menu span {
+  margin: 0 10px;
+}
+
+.cart-icon {
+  margin: 0 10px;
+}
+
+.third-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.location-input {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  width: 200px; /* Set desired width for location input */
+  background-color: #f9f3f3;
+  
+}
+
+.location-input input {
+  border: none; /* Optional: Remove border from input fields */
+  outline: none; /* Optional: Remove outline on focus */
+  flex: 1; /* Make input take the available space */
+  padding: 5px; /* Add some padding */
+  border-radius: 5px; /* Set border-radius to 10px for input fields */
+  background-color: #f9f3f3;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  width: 500px; /* Increase the width for search input */
+  background-color: #fffdfd;
+  
+  
+}
+
+.search-input input {
+  border: none; /* Optional: Remove border from input fields */
+  outline: none; /* Optional: Remove outline on focus */
+  flex: 1; /* Make input take the available space */
+  padding: 5px; /* Add some padding */
+  border-radius: 2px; /* Set border-radius to 10px for input fields */
+  background-color: #fffdfd;
+  
+}
+
+.search-icon {
+  margin-left: 5px;
+}
+
+.quick-buy-section {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds 5px space between the span and button */
+}
+
+.quick-buy-icon {
+  margin-right: 10px;
+  color: red;
+}
+
+.quick-order-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.category-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.category-bar span {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.category-bar span:hover {
+  color: red; /* Hover color */
+}
+
+.category-bar span:hover .dropdown {
+  display: block;
+}
+
+/* Base styles for the dropdown, hidden by default */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: max-content;
+  padding: 10px;
+  z-index: 1000;
+  color: black;
+}
+
+/* Styling for the dropdown items */
+.dropdown div {
+  padding: 5px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown div:hover {
+  color: red;
+   
+}
+
+/* Health Resource Center dropdown specific styles */
+.category-bar span[data-dropdown="health-resource"] .dropdown {
+  width: 200px;
+}
+
+/* Vitamins dropdown - hidden by default, but styled for grid layout on hover */
+.category-bar span[data-dropdown="vitamins"] .dropdown {
+  width: 400px;
+  display: none; /* Hidden by default */
+  grid-template-columns: 1fr 1fr; /* Splitting into two columns */
+}
+
+/* Nutritional Drinks dropdown */
+.category-bar span[data-dropdown="nutritional-drinks"] .dropdown {
+  width: 250px;
+}
+
+/* Fitness Supplements dropdown - hidden by default, but styled for grid layout on hover */
+.category-bar span[data-dropdown="fitness-supplements"] .dropdown {
+  width: 400px;
+  display: none; /* Hidden by default */
+  grid-template-columns: 1fr 1fr; /* Splitting into two columns */
+}
+
+/* Show dropdown on hover for Vitamins and Fitness Supplements */
+.category-bar span[data-dropdown="vitamins"]:hover .dropdown,
+.category-bar span[data-dropdown="fitness-supplements"]:hover .dropdown {
+  display: grid; /* Display as grid when hovered */
+  grid-template-columns: 1fr 1fr; /* Ensure two-column layout */
+  width: 400px;
+}
+
+
+
+.main-content {
+  padding: 20px;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+}
+
+.content-box, .image-box {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+}
+
+
+.shop-by-health {
+  margin: 20px 0; /* Margin for the heading and grid */
+}
+
+.shop-by-health h2 {
+  text-align: left; /* Align heading to the left */
+  font-size: 24px; /* Font size for the heading */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+  gap: 10px; /* Space between grid items */
+}
+
+.grid-item {
+  text-align: center; /* Center the content */
+}
+
+.grid-item img {
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.grid-item p {
+  margin-top: 5px; /* Space between image and text */
+}
+
+.featured-brands {
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+.featured-brands .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-brands h2 {
+  color: rgb(0, 0, 0);
+}
+
+.see-all-btn {
+  background-color: rgb(247, 11, 11);
+  color: rgb(255, 254, 254);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.collagen-section {
+  padding: 20px;
+  background-color: #fff; /* Adjust as necessary */
+  text-align: left;
+}
+
+
+
+.header {
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: space-between; /* Space between heading and button */
+  align-items: center; /* Center vertically */
+  margin-bottom: 20px; /* Space below header */
+}
+
+.collagen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.collagen-item {
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px;
+  text-align: center;
+}
+
+.collagen-item img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.mrp {
+  text-decoration: line-through; /* Style for the MRP */
+}
+
+.price {
+  font-weight: bold; /* Emphasize the price */
+  color: #f00; /* Red color for price */
+}
+
+.see-all {
+  padding: 10px 20px;
+  background-color: #ff0404; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

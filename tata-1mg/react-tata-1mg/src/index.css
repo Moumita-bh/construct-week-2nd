@@ -1,0 +1,58 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Styling for main app container */
+  .App {
+    text-align: center;
+  }
+  
+  /* Links and buttons */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: #ff3b30;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #e02d27;
+  }
+  
+  /* Inputs */
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Additional responsive utilities */
+  @media (max-width: 768px) {
+    .category-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .middle-menu span,
+    .right-menu span {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .main-content {
+      padding: 10px;
+    }
+  }
+  
