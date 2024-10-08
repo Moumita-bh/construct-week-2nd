@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import MainContent from './MainContent';
 import CollagenSection from './CollagenSection'
 import './App.css';
